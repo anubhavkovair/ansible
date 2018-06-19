@@ -1,12 +1,8 @@
 ---
  - hosts: ansible-client
    user: kovair
-   vars:
-    motd_welcome: 'Welcome to New Book'
    tasks:
-   - name: Same motd
-     copy:
-      src: /etc/ansible/demo.txt
-      dest: /home/kovair
-      content: "{{motd_welcome}}"
-      
+   - name: New Dir creation
+     file: path:/home/kovair/TestPlay state:directory recurse:yes mode:0775
+   - name: Copy files from /home/kovair/* of Master
+     copy: src: /home/kovair/* dest: /home/kovair
