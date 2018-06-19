@@ -1,0 +1,9 @@
+---
+ - hosts: all
+   remote_user: root
+   become: yes
+   become_user: root
+  
+   tasks:
+    - name: Install gimp
+      yum: name=gimp state=installed
