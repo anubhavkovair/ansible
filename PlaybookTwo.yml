@@ -1,7 +1,6 @@
 ---
  - hosts: ansible-client
    user: kovair
-   vars:
    tasks:
    - name: Same motd
      copy:
