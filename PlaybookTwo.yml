@@ -2,10 +2,8 @@
  - hosts: ansible-client
    user: kovair
    vars:
-    motd_welcome: 'Welcome to New Book'
    tasks:
    - name: Same motd
      copy:
       src: /etc/ansible/demo.txt
       dest: /home/kovair
-      content: "{{motd_welcome}}"
