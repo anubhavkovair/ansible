@@ -2,13 +2,13 @@
  - hosts: ansible-client
    user: kovair
    tasks:
-   - name: New Dir creation
-     file: 
-      path:/home/kovair/TestPlay 
-      state:directory 
-      recurse:yes 
-      mode:0775
-   - name: Copy files from /home/kovair/* of Master
-     copy: 
-      src: /home/kovair/* 
-      dest: /home/kovair
+    - name: New Dir creation
+      file: 
+       path:/home/kovair/TestPlay 
+       state:directory 
+       recurse:yes 
+       mode:0775
+    - name: Copy files from /home/kovair/* of Master
+      copy: 
+       src: /home/kovair/* 
+       dest: /home/kovair
