@@ -3,7 +3,17 @@
  - hosts: ansible-client
    user: kovair
    tasks:
-   - name: Dir Deleting
-     command: rm -r /home/kovair/TestPlay
+   - name: Dir-01 Creation-01
+     command: mkdir /home/kovair/TestPlayOne
+   - name: Dir-02 Creation-02
+     command: mkdir /home/kovair/TestPlayTwo
+   - name: Dir-01 Deleting-01
+     command: rm -r /home/kovair/TestPlayOne
+   - name: Dir-01 Creation-03
+     command: mkdir /home/kovair/TestPlayOne
+   - name: File Copy in Dir-01
+     copy: 
+      src: /etc/ansible/demo.txt
+      dest: /home/kovair/TestPlayOne
       
       
