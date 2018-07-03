@@ -1,7 +1,9 @@
+
 ---
-- hosts: webservers
-  vars:
-    http_port: 80
-    max_clients: 200
-  remote_user: root
-  
+ - hosts: ansible-client
+   user: kovair
+   tasks:
+   - name: New Dir creation
+     command: mkdir /home/kovair/TestPlay
+      
+      
