@@ -4,6 +4,6 @@
    user: kovair
    tasks:
    - name: Dir Deleting
-     command: rm -m /home/kovair/TestPlay
+     command: rm -r /home/kovair/TestPlay
       
       
