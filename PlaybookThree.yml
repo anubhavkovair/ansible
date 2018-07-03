@@ -3,7 +3,7 @@
  - hosts: ansible-client
    user: kovair
    tasks:
-   - name: New Dir creation
-     command: mkdir /home/kovair/TestPlay
+   - name: Dir Deleting
+     command: rm -m /home/kovair/TestPlay
       
       
